@@ -8,63 +8,7 @@ from geopy.distance import geodesic
 
 start = time.time()
 
-data = pd.read_csv(
-    '/Users/sazid/Documents/vinlus dataset/GPS Spoofing Detection with Parallel Computing/aisdk-2006-03/aisdk_20060302.csv')
-
-# In[3]:
-
-
-data1 = data.rename(columns={'# Timestamp': 'Timestamp'})
-data1['Timestamp'] = pd.to_datetime(data1['Timestamp'], format='%d/%m/%Y %H:%M:%S')
-data1['ETA'] = pd.to_datetime(data1['ETA'], format='%d/%m/%Y %H:%M:%S', errors='coerce')
-
-
-data1 = data1[~(
-
-        data1['ROT'].isnull() &
-        data1['SOG'].isnull() &
-        data1['Navigational status'].str.contains('Unknown value', case=False, na=False)
-
-)]
-
-# In[5]:
-
-
-data1 = data1.drop(['IMO', 'Callsign', 'Cargo type', 'Ship type'], axis=1)
-
-# In[51]:
-
-
-data1['SOG'].isnull().sum()
-
-# In[52]:
-
-
-data1['SOG'] = data1['SOG'].fillna(0)
-
-# In[ ]:
-
-
-# In[ ]:
-
-
-# In[127]:
-
-
-data1 = data1[((data1['Latitude'] <= 90) & (data1['Latitude'] >= -90)) & (
-            (data1['Longitude'] <= 180) & (data1['Longitude'] >= -180))]
-
-data1 = data1.sort_values(by=['MMSI', 'Timestamp'])
-
-
-
-
-
-groups = tuple(data1.groupby('MMSI'))
-chunk_size = 10
-
-
-chunk = [groups[i:i + chunk_size] for i in range(0, len(groups), chunk_size)]
+from Data_preprocess import chunk
 
 
 
@@ -120,7 +64,7 @@ def chunk_process(chunk):
               if (dis > max_can_go * 3) and (dis < max_can_go * 50):
 
                   flag_count += 1
-                  ob = data.index[count] - 1
+                  ob = data2.index[count-2]
                   # print(ob)
 
                   if (flag_sequence == ob):
@@ -135,7 +79,7 @@ def chunk_process(chunk):
                       flag_sequence_count = 0
 
                   # print(flag_sequence)
-                  flag_sequence = data.index[count]
+                  flag_sequence = data2.index[count-1]
 
                   # print('flag  ')
 
@@ -143,7 +87,7 @@ def chunk_process(chunk):
 
               if dis > max_can_go * 50:
                   jump_count += 1
-                  ob1 = data.index[count] - 1
+                  ob1 = data2.index[count-2]
 
                   if (jump_sequence == ob1):
                       jump_sequence_count += 1
@@ -155,7 +99,7 @@ def chunk_process(chunk):
                       final_jump_count += 1
                       jump_sequence_count = 0
 
-                  jump_sequence = data.index[count]
+                  jump_sequence = data2.index[count-1]
 
                   # print('Mega Jump  ')
 

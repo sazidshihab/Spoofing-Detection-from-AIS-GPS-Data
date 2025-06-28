@@ -1,90 +1,11 @@
-
 import time
-import pandas as pd
 
 from geopy.distance import geodesic
 
-
+from Data_preprocess import chunk
+import pandas as pd
 
 start = time.time()
-
-data = pd.read_csv(
-    '/Users/sazid/Documents/vinlus dataset/GPS Spoofing Detection with Parallel Computing/aisdk-2006-03/aisdk_20060302.csv')
-
-
-
-
-data1 = data.rename(columns={'# Timestamp': 'Timestamp'})
-data1['Timestamp'] = pd.to_datetime(data1['Timestamp'], format='%d/%m/%Y %H:%M:%S')
-data1['ETA'] = pd.to_datetime(data1['ETA'], format='%d/%m/%Y %H:%M:%S', errors='coerce')
-
-
-
-
-with pd.option_context('display.max_rows', None, 'display.max_columns', None):
-     '''
-     print(data1[
-
-                data1['ROT'].isnull() &
-                data1['SOG'].isnull() &
-                data1['Navigational status'].str.contains('Unknown value', case=False, na=False)
-
-                 ]) '''
-
-
-
-
-data1 = data1[~(
-
-        data1['ROT'].isnull() &
-        data1['SOG'].isnull() &
-        data1['Navigational status'].str.contains('Unknown value', case=False, na=False)
-
-)]
-
-
-
-
-data1 = data1.drop(['IMO', 'Callsign', 'Cargo type', 'Ship type'], axis=1)
-
-
-
-
-data1['SOG'].isnull().sum()
-
-
-
-
-data1['SOG'] = data1['SOG'].fillna(0)
-
-
-
-data1 = data1[((data1['Latitude'] <= 90) & (data1['Latitude'] >= -90)) & (
-            (data1['Longitude'] <= 180) & (data1['Longitude'] >= -180))]
-
-
-data1 = data1.sort_values(by=['MMSI', 'Timestamp'])
-
-
-
-
-
-groups = tuple(data1.groupby('MMSI'))
-
-
-chunk_size = 10
-
-
-
-chunk = [groups[i:i + chunk_size] for i in range(0, len(groups), chunk_size)]
-
-
-
-
-len(chunk)
-
-
-
 
 loc_anamoly_container = pd.DataFrame()
 mmsi_ship = []
@@ -96,16 +17,13 @@ final_jump_count_ship = []
 
 
 
-container = chunk[0]
-mmsi, data2 = container[0]
 
 
+for i in range(len(chunk)):
+    container4 = chunk[i]
+    for j in range(len(container4)):
 
-
-for i in range(len(chunk) - 1):
-    for j in range(len(container)):
-        container = chunk[i]
-        mmsi, data2 = container[j]
+        mmsi, data2 = container4[j]
 
         time2 = None
         lat1 = None
@@ -139,11 +57,11 @@ for i in range(len(chunk) - 1):
                 # speed,
                 # 'with actual speed should go: ', speed/60 * time_dif, time1)
 
-                # detecting mid level anamolies
+                # detecting mid level anomalies
                 if (dis > max_can_go * 3) and (dis < max_can_go * 50):
 
                     flag_count += 1
-                    ob = data.index[count] - 1
+                    ob = data2.index[count-2]
                     # print(ob)
 
                     if (flag_sequence == ob):
@@ -158,7 +76,7 @@ for i in range(len(chunk) - 1):
                         flag_sequence_count = 0
 
                     # print(flag_sequence)
-                    flag_sequence = data.index[count]
+                    flag_sequence = data2.index[count-1]
 
                     # print('flag  ')
 
@@ -166,7 +84,7 @@ for i in range(len(chunk) - 1):
 
                 if dis > max_can_go * 50:
                     jump_count += 1
-                    ob1 = data.index[count] - 1
+                    ob1 = data2.index[count-2]
 
                     if (jump_sequence == ob1):
                         jump_sequence_count += 1
@@ -178,7 +96,7 @@ for i in range(len(chunk) - 1):
                         final_jump_count += 1
                         jump_sequence_count = 0
 
-                    jump_sequence = data.index[count]
+                    jump_sequence = data2.index[count-1]
 
                     # print('Mega Jump  ')
 
@@ -207,7 +125,7 @@ loc_anamoly_container['final_jump_count_ship'] = final_jump_count_ship
 
 
 
-with pd.option_context('Display.max_rows', None):
+with pd.option_context('Display.max_rows', None, 'Display.max_columns', None):
     print(loc_anamoly_container[(loc_anamoly_container['final_flag_ship'] >= 1) | (
                 loc_anamoly_container['final_jump_count_ship'] >= 1)])
 end = time.time()
