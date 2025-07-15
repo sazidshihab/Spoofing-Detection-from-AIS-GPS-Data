@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_346f0715a249824208df0d84b145fdad {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_346f0715a249824208df0d84b145fdad" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_346f0715a249824208df0d84b145fdad = L.map(
+                "map_346f0715a249824208df0d84b145fdad",
+                {
+                    center: [56.42903282352941, 11.832675499999999],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_9c226c574e3940e8ac5020330c665d60 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_9c226c574e3940e8ac5020330c665d60.addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var poly_line_0747ff6204c9cc8e1fc341372a97114f = L.polyline(
+                [[56.156167, 10.243667], [55.702967, 12.597883], [56.140667, 10.315667], [55.7022, 12.596483], [55.702183, 12.596283], [56.100667, 10.469167], [55.702217, 12.596367], [56.0595, 10.877833], [55.702167, 12.596317], [57.099833, 11.677667], [55.702, 12.596633], [57.265833, 11.561667], [55.702167, 12.596367], [57.299333, 11.538833], [55.702167, 12.596433], [57.332833, 11.516333], [55.70215, 12.596383], [57.401, 11.476667], [55.7022, 12.596317], [57.435833, 11.461333], [57.5205, 11.357667], [55.70215, 12.59645], [57.543833, 11.309], [55.70225, 12.59645], [55.702167, 12.5964], [57.592833, 11.212], [55.7022, 12.59635], [57.616667, 11.1645], [55.70215, 12.596517], [57.640833, 11.1165], [57.867333, 10.362333], [55.576033, 12.70255], [57.864333, 10.298167], [55.53975, 12.701783]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var marker_cf9f3ad2932d3e3e773d831af6d37fc4 = L.marker(
+                [56.156167, 10.243667],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_8e6910538310bc97cb7bc7a497108e67 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3a1ce5d3fcfe52171b932b7d120c9836 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_df0c693bb86e33a582c14484ac7fc803 = $(`<div id="html_df0c693bb86e33a582c14484ac7fc803" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 07:14<br>                                         Lat: 56.156167<br>                                         Lon: 10.243667                                         </div>`)[0];
+                popup_3a1ce5d3fcfe52171b932b7d120c9836.setContent(html_df0c693bb86e33a582c14484ac7fc803);
+            
+        
+
+        marker_cf9f3ad2932d3e3e773d831af6d37fc4.bindPopup(popup_3a1ce5d3fcfe52171b932b7d120c9836)
+        ;
+
+        
+    
+    
+                marker_cf9f3ad2932d3e3e773d831af6d37fc4.setIcon(icon_8e6910538310bc97cb7bc7a497108e67);
+            
+    
+            var marker_18cd9dcd4d798fdc02cdaca6ab5f5408 = L.marker(
+                [55.702967, 12.597883],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_88c444cf3aa6476bfa97cdd2f8ac06e5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a6ef1274495573272298e1092e51eca8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d8d2df24efce499ed86f8a091e1282b5 = $(`<div id="html_d8d2df24efce499ed86f8a091e1282b5" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 07:16<br>                                         Lat: 55.702967<br>                                         Lon: 12.597883                                         </div>`)[0];
+                popup_a6ef1274495573272298e1092e51eca8.setContent(html_d8d2df24efce499ed86f8a091e1282b5);
+            
+        
+
+        marker_18cd9dcd4d798fdc02cdaca6ab5f5408.bindPopup(popup_a6ef1274495573272298e1092e51eca8)
+        ;
+
+        
+    
+    
+                marker_18cd9dcd4d798fdc02cdaca6ab5f5408.setIcon(icon_88c444cf3aa6476bfa97cdd2f8ac06e5);
+            
+    
+            var marker_edcb1da1efa20fa21f4a818e0c7e2ccb = L.marker(
+                [56.140667, 10.315667],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_558ac9e50842e87fa6f065d1ae12e0ec = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_72bee2ed1886840e2269461780105b11 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7c41c07dfaaf48142c857954608e7711 = $(`<div id="html_7c41c07dfaaf48142c857954608e7711" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 11:40<br>                                         Lat: 56.140667<br>                                         Lon: 10.315667                                         </div>`)[0];
+                popup_72bee2ed1886840e2269461780105b11.setContent(html_7c41c07dfaaf48142c857954608e7711);
+            
+        
+
+        marker_edcb1da1efa20fa21f4a818e0c7e2ccb.bindPopup(popup_72bee2ed1886840e2269461780105b11)
+        ;
+
+        
+    
+    
+                marker_edcb1da1efa20fa21f4a818e0c7e2ccb.setIcon(icon_558ac9e50842e87fa6f065d1ae12e0ec);
+            
+    
+            var marker_44b57817f4904fddc321c382522845f0 = L.marker(
+                [55.7022, 12.596483],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_7faa2b09c778b75d804117475305de98 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2b4c02861f4e9f84e8bf5198ad4740e9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_62091f655cc6926c0858974dbaa49d47 = $(`<div id="html_62091f655cc6926c0858974dbaa49d47" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 11:40<br>                                         Lat: 55.7022<br>                                         Lon: 12.596483                                         </div>`)[0];
+                popup_2b4c02861f4e9f84e8bf5198ad4740e9.setContent(html_62091f655cc6926c0858974dbaa49d47);
+            
+        
+
+        marker_44b57817f4904fddc321c382522845f0.bindPopup(popup_2b4c02861f4e9f84e8bf5198ad4740e9)
+        ;
+
+        
+    
+    
+                marker_44b57817f4904fddc321c382522845f0.setIcon(icon_7faa2b09c778b75d804117475305de98);
+            
+    
+            var marker_64f26215a449ccb606d8bd7e95dec7a8 = L.marker(
+                [55.702183, 12.596283],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_ec55ebe9e0ac342ed595cba66f8428fb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5fc48765e13507f223cd8096e3c14573 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d66fc92e378c3581324a6453beaff5a3 = $(`<div id="html_d66fc92e378c3581324a6453beaff5a3" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 11:55<br>                                         Lat: 55.702183<br>                                         Lon: 12.596283                                         </div>`)[0];
+                popup_5fc48765e13507f223cd8096e3c14573.setContent(html_d66fc92e378c3581324a6453beaff5a3);
+            
+        
+
+        marker_64f26215a449ccb606d8bd7e95dec7a8.bindPopup(popup_5fc48765e13507f223cd8096e3c14573)
+        ;
+
+        
+    
+    
+                marker_64f26215a449ccb606d8bd7e95dec7a8.setIcon(icon_ec55ebe9e0ac342ed595cba66f8428fb);
+            
+    
+            var marker_392c3c3ebe1df4efee6dc252052a3bfb = L.marker(
+                [56.100667, 10.469167],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_154c1abf12ea41cfcedb90b0c333a442 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1c8fa80d9255e7497c5124d162c28457 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_375144e1a357016450e1d0ef0e4e7a07 = $(`<div id="html_375144e1a357016450e1d0ef0e4e7a07" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 11:58<br>                                         Lat: 56.100667<br>                                         Lon: 10.469167                                         </div>`)[0];
+                popup_1c8fa80d9255e7497c5124d162c28457.setContent(html_375144e1a357016450e1d0ef0e4e7a07);
+            
+        
+
+        marker_392c3c3ebe1df4efee6dc252052a3bfb.bindPopup(popup_1c8fa80d9255e7497c5124d162c28457)
+        ;
+
+        
+    
+    
+                marker_392c3c3ebe1df4efee6dc252052a3bfb.setIcon(icon_154c1abf12ea41cfcedb90b0c333a442);
+            
+    
+            var marker_a8c7a17c3e2026ce02d6af8a837fcf35 = L.marker(
+                [55.702217, 12.596367],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_0ae2b4866380c53e65347a8ae26a22b7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ee1b248b32c2f921308738182d0024be = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_07a6d631c00db76bf2ca260f585597f3 = $(`<div id="html_07a6d631c00db76bf2ca260f585597f3" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 12:40<br>                                         Lat: 55.702217<br>                                         Lon: 12.596367                                         </div>`)[0];
+                popup_ee1b248b32c2f921308738182d0024be.setContent(html_07a6d631c00db76bf2ca260f585597f3);
+            
+        
+
+        marker_a8c7a17c3e2026ce02d6af8a837fcf35.bindPopup(popup_ee1b248b32c2f921308738182d0024be)
+        ;
+
+        
+    
+    
+                marker_a8c7a17c3e2026ce02d6af8a837fcf35.setIcon(icon_0ae2b4866380c53e65347a8ae26a22b7);
+            
+    
+            var marker_84609e90e6fee514704e2cc37db15894 = L.marker(
+                [56.0595, 10.877833],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_6f2c77df25c70d2c464fa69315a21112 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_758de46541a2f99b4a4f9bb2da7bf557 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d220bff71d7f71b5bd99e6c30de67565 = $(`<div id="html_d220bff71d7f71b5bd99e6c30de67565" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 12:41<br>                                         Lat: 56.0595<br>                                         Lon: 10.877833                                         </div>`)[0];
+                popup_758de46541a2f99b4a4f9bb2da7bf557.setContent(html_d220bff71d7f71b5bd99e6c30de67565);
+            
+        
+
+        marker_84609e90e6fee514704e2cc37db15894.bindPopup(popup_758de46541a2f99b4a4f9bb2da7bf557)
+        ;
+
+        
+    
+    
+                marker_84609e90e6fee514704e2cc37db15894.setIcon(icon_6f2c77df25c70d2c464fa69315a21112);
+            
+    
+            var marker_c34261590b1fed7127ca51eb03cf0865 = L.marker(
+                [55.702167, 12.596317],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_71bedc8902ba68cefb80a9bf31eefac5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7ed794d2457d960ab1c76990e126d409 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c0f58b5c55caad6b26b29543206ae528 = $(`<div id="html_c0f58b5c55caad6b26b29543206ae528" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 16:29<br>                                         Lat: 55.702167<br>                                         Lon: 12.596317                                         </div>`)[0];
+                popup_7ed794d2457d960ab1c76990e126d409.setContent(html_c0f58b5c55caad6b26b29543206ae528);
+            
+        
+
+        marker_c34261590b1fed7127ca51eb03cf0865.bindPopup(popup_7ed794d2457d960ab1c76990e126d409)
+        ;
+
+        
+    
+    
+                marker_c34261590b1fed7127ca51eb03cf0865.setIcon(icon_71bedc8902ba68cefb80a9bf31eefac5);
+            
+    
+            var marker_13d22146f3a6d4469c7802b36e6aeb65 = L.marker(
+                [57.099833, 11.677667],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_9d603af4af9b270d2218c6cc6bc534a6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d6d8f4b3ae1d38a1b41946118d8c46e0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2289e3934eb96920d586a151ff583056 = $(`<div id="html_2289e3934eb96920d586a151ff583056" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 16:30<br>                                         Lat: 57.099833<br>                                         Lon: 11.677667                                         </div>`)[0];
+                popup_d6d8f4b3ae1d38a1b41946118d8c46e0.setContent(html_2289e3934eb96920d586a151ff583056);
+            
+        
+
+        marker_13d22146f3a6d4469c7802b36e6aeb65.bindPopup(popup_d6d8f4b3ae1d38a1b41946118d8c46e0)
+        ;
+
+        
+    
+    
+                marker_13d22146f3a6d4469c7802b36e6aeb65.setIcon(icon_9d603af4af9b270d2218c6cc6bc534a6);
+            
+    
+            var marker_456f074e8f2aa5e029285a8a6742b895 = L.marker(
+                [55.702, 12.596633],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_1cbeb22fc2050ce19f7c4fc26379919c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_21b261c4c22958467acd1e7892c90a9f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8b8f080b727a4a25c82ab6acb3e90a66 = $(`<div id="html_8b8f080b727a4a25c82ab6acb3e90a66" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 16:59<br>                                         Lat: 55.702<br>                                         Lon: 12.596633                                         </div>`)[0];
+                popup_21b261c4c22958467acd1e7892c90a9f.setContent(html_8b8f080b727a4a25c82ab6acb3e90a66);
+            
+        
+
+        marker_456f074e8f2aa5e029285a8a6742b895.bindPopup(popup_21b261c4c22958467acd1e7892c90a9f)
+        ;
+
+        
+    
+    
+                marker_456f074e8f2aa5e029285a8a6742b895.setIcon(icon_1cbeb22fc2050ce19f7c4fc26379919c);
+            
+    
+            var marker_aea467c177c428855c6b0c9c689d293c = L.marker(
+                [57.265833, 11.561667],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_e39c5b38a45365d273fb2eef83e69153 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_85b08cada0540e008bfc6cc1e65bb9ac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a3cfa6447f6acf75528a049a7c76a934 = $(`<div id="html_a3cfa6447f6acf75528a049a7c76a934" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 17:01<br>                                         Lat: 57.265833<br>                                         Lon: 11.561667                                         </div>`)[0];
+                popup_85b08cada0540e008bfc6cc1e65bb9ac.setContent(html_a3cfa6447f6acf75528a049a7c76a934);
+            
+        
+
+        marker_aea467c177c428855c6b0c9c689d293c.bindPopup(popup_85b08cada0540e008bfc6cc1e65bb9ac)
+        ;
+
+        
+    
+    
+                marker_aea467c177c428855c6b0c9c689d293c.setIcon(icon_e39c5b38a45365d273fb2eef83e69153);
+            
+    
+            var marker_ecf5bf1372bad0c94923c8009166c141 = L.marker(
+                [55.702167, 12.596367],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_02480e32f72f19ffec641da45319243c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_991bddbc2492f7058eb251dec8bce13a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9ab669772afeebc3c16928cc323a83ab = $(`<div id="html_9ab669772afeebc3c16928cc323a83ab" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 17:05<br>                                         Lat: 55.702167<br>                                         Lon: 12.596367                                         </div>`)[0];
+                popup_991bddbc2492f7058eb251dec8bce13a.setContent(html_9ab669772afeebc3c16928cc323a83ab);
+            
+        
+
+        marker_ecf5bf1372bad0c94923c8009166c141.bindPopup(popup_991bddbc2492f7058eb251dec8bce13a)
+        ;
+
+        
+    
+    
+                marker_ecf5bf1372bad0c94923c8009166c141.setIcon(icon_02480e32f72f19ffec641da45319243c);
+            
+    
+            var marker_0be56d628d057591e79db093773aef44 = L.marker(
+                [57.299333, 11.538833],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_a7229c79cf5b9cb53f42e6d50a808560 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5b606aaf2da67ac623e8a0c4012a05d6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b032f5fe329b53bb68aee40d57c75f30 = $(`<div id="html_b032f5fe329b53bb68aee40d57c75f30" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 17:07<br>                                         Lat: 57.299333<br>                                         Lon: 11.538833                                         </div>`)[0];
+                popup_5b606aaf2da67ac623e8a0c4012a05d6.setContent(html_b032f5fe329b53bb68aee40d57c75f30);
+            
+        
+
+        marker_0be56d628d057591e79db093773aef44.bindPopup(popup_5b606aaf2da67ac623e8a0c4012a05d6)
+        ;
+
+        
+    
+    
+                marker_0be56d628d057591e79db093773aef44.setIcon(icon_a7229c79cf5b9cb53f42e6d50a808560);
+            
+    
+            var marker_fb37dd63a0f1033f7738c708f3d28381 = L.marker(
+                [55.702167, 12.596433],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_8cbdab2155c26ff2dacfb26f52f2b57e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_83810feff80df5cafc4e85d3244f64ab = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2fa6397eb1f1939d5976df1d8b105e0b = $(`<div id="html_2fa6397eb1f1939d5976df1d8b105e0b" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 17:11<br>                                         Lat: 55.702167<br>                                         Lon: 12.596433                                         </div>`)[0];
+                popup_83810feff80df5cafc4e85d3244f64ab.setContent(html_2fa6397eb1f1939d5976df1d8b105e0b);
+            
+        
+
+        marker_fb37dd63a0f1033f7738c708f3d28381.bindPopup(popup_83810feff80df5cafc4e85d3244f64ab)
+        ;
+
+        
+    
+    
+                marker_fb37dd63a0f1033f7738c708f3d28381.setIcon(icon_8cbdab2155c26ff2dacfb26f52f2b57e);
+            
+    
+            var marker_73e2fbe5f808abf7b353938fd7a66b74 = L.marker(
+                [57.332833, 11.516333],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_edf915fe7038a129c79cf8e09e5aa0ed = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d8d7bb669e95ca6722a2a5611c27eb8a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bec3d011a6becdde14cf507d7987a3b8 = $(`<div id="html_bec3d011a6becdde14cf507d7987a3b8" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 17:13<br>                                         Lat: 57.332833<br>                                         Lon: 11.516333                                         </div>`)[0];
+                popup_d8d7bb669e95ca6722a2a5611c27eb8a.setContent(html_bec3d011a6becdde14cf507d7987a3b8);
+            
+        
+
+        marker_73e2fbe5f808abf7b353938fd7a66b74.bindPopup(popup_d8d7bb669e95ca6722a2a5611c27eb8a)
+        ;
+
+        
+    
+    
+                marker_73e2fbe5f808abf7b353938fd7a66b74.setIcon(icon_edf915fe7038a129c79cf8e09e5aa0ed);
+            
+    
+            var marker_26d52e6cf3d4db6471987674586b5f5a = L.marker(
+                [55.70215, 12.596383],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_db6a12441bc0e4d0565976289953360f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8762bfe70a530c78b8dd709048c78dc6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_33a2ba732b8838c098e871449b93cd01 = $(`<div id="html_33a2ba732b8838c098e871449b93cd01" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 17:23<br>                                         Lat: 55.70215<br>                                         Lon: 12.596383                                         </div>`)[0];
+                popup_8762bfe70a530c78b8dd709048c78dc6.setContent(html_33a2ba732b8838c098e871449b93cd01);
+            
+        
+
+        marker_26d52e6cf3d4db6471987674586b5f5a.bindPopup(popup_8762bfe70a530c78b8dd709048c78dc6)
+        ;
+
+        
+    
+    
+                marker_26d52e6cf3d4db6471987674586b5f5a.setIcon(icon_db6a12441bc0e4d0565976289953360f);
+            
+    
+            var marker_e67a864c4fb3948ca14c026c12b98ad1 = L.marker(
+                [57.401, 11.476667],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_47ab8749aa25be8837bd14e9fecf0330 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7e281cbfae1ac65f053334eda0516525 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_60f443b9147b40c73eeb141ba99fc81a = $(`<div id="html_60f443b9147b40c73eeb141ba99fc81a" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 17:25<br>                                         Lat: 57.401<br>                                         Lon: 11.476667                                         </div>`)[0];
+                popup_7e281cbfae1ac65f053334eda0516525.setContent(html_60f443b9147b40c73eeb141ba99fc81a);
+            
+        
+
+        marker_e67a864c4fb3948ca14c026c12b98ad1.bindPopup(popup_7e281cbfae1ac65f053334eda0516525)
+        ;
+
+        
+    
+    
+                marker_e67a864c4fb3948ca14c026c12b98ad1.setIcon(icon_47ab8749aa25be8837bd14e9fecf0330);
+            
+    
+            var marker_daff52da1295069719fdb94d84fbf190 = L.marker(
+                [55.7022, 12.596317],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_bb9a34e59040d2c3e57f420c94622250 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d84fd694285927d8be6fa54611eb7d08 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cdac8872b6d0ae1841e2a8f52b332dc4 = $(`<div id="html_cdac8872b6d0ae1841e2a8f52b332dc4" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 17:29<br>                                         Lat: 55.7022<br>                                         Lon: 12.596317                                         </div>`)[0];
+                popup_d84fd694285927d8be6fa54611eb7d08.setContent(html_cdac8872b6d0ae1841e2a8f52b332dc4);
+            
+        
+
+        marker_daff52da1295069719fdb94d84fbf190.bindPopup(popup_d84fd694285927d8be6fa54611eb7d08)
+        ;
+
+        
+    
+    
+                marker_daff52da1295069719fdb94d84fbf190.setIcon(icon_bb9a34e59040d2c3e57f420c94622250);
+            
+    
+            var marker_c10754351aff8ca24f8867f6bbc051ca = L.marker(
+                [57.435833, 11.461333],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_214cd388b6b607a2e1471945d41c4e98 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_649ffd6d08ddbcf38b11c769bec0f657 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b3f87f5e34c400924d61a17bf1f94708 = $(`<div id="html_b3f87f5e34c400924d61a17bf1f94708" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 17:31<br>                                         Lat: 57.435833<br>                                         Lon: 11.461333                                         </div>`)[0];
+                popup_649ffd6d08ddbcf38b11c769bec0f657.setContent(html_b3f87f5e34c400924d61a17bf1f94708);
+            
+        
+
+        marker_c10754351aff8ca24f8867f6bbc051ca.bindPopup(popup_649ffd6d08ddbcf38b11c769bec0f657)
+        ;
+
+        
+    
+    
+                marker_c10754351aff8ca24f8867f6bbc051ca.setIcon(icon_214cd388b6b607a2e1471945d41c4e98);
+            
+    
+            var marker_d7fc2bdeaf3c6f531d860750ff06010b = L.marker(
+                [57.5205, 11.357667],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_c6f7c6017e9eeecbbf8c0e4fc45a97fe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c86e89c9753da867e729fce582ede407 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b96304910ae8305294292d765d3ac44b = $(`<div id="html_b96304910ae8305294292d765d3ac44b" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 17:50<br>                                         Lat: 57.5205<br>                                         Lon: 11.357667                                         </div>`)[0];
+                popup_c86e89c9753da867e729fce582ede407.setContent(html_b96304910ae8305294292d765d3ac44b);
+            
+        
+
+        marker_d7fc2bdeaf3c6f531d860750ff06010b.bindPopup(popup_c86e89c9753da867e729fce582ede407)
+        ;
+
+        
+    
+    
+                marker_d7fc2bdeaf3c6f531d860750ff06010b.setIcon(icon_c6f7c6017e9eeecbbf8c0e4fc45a97fe);
+            
+    
+            var marker_30d58b9ce98a6944242e559d49d294a6 = L.marker(
+                [55.70215, 12.59645],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_f82d7ef3ce9d1b3abbd6e8990538db71 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fcf5ea2f838ad40709afa26a94edd61e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e390e5a8e0f175d41cc6a9b7ff3f0f37 = $(`<div id="html_e390e5a8e0f175d41cc6a9b7ff3f0f37" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 17:53<br>                                         Lat: 55.70215<br>                                         Lon: 12.59645                                         </div>`)[0];
+                popup_fcf5ea2f838ad40709afa26a94edd61e.setContent(html_e390e5a8e0f175d41cc6a9b7ff3f0f37);
+            
+        
+
+        marker_30d58b9ce98a6944242e559d49d294a6.bindPopup(popup_fcf5ea2f838ad40709afa26a94edd61e)
+        ;
+
+        
+    
+    
+                marker_30d58b9ce98a6944242e559d49d294a6.setIcon(icon_f82d7ef3ce9d1b3abbd6e8990538db71);
+            
+    
+            var marker_bb1566b7ef91c6104119c87e761268b8 = L.marker(
+                [57.543833, 11.309],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_b34f9c5fd8acf02a8af6d84d1e116f62 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0a136df44538617482465d16df9a1acb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_66dcaac066f112e8f6dc29a26b358f91 = $(`<div id="html_66dcaac066f112e8f6dc29a26b358f91" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 17:56<br>                                         Lat: 57.543833<br>                                         Lon: 11.309                                         </div>`)[0];
+                popup_0a136df44538617482465d16df9a1acb.setContent(html_66dcaac066f112e8f6dc29a26b358f91);
+            
+        
+
+        marker_bb1566b7ef91c6104119c87e761268b8.bindPopup(popup_0a136df44538617482465d16df9a1acb)
+        ;
+
+        
+    
+    
+                marker_bb1566b7ef91c6104119c87e761268b8.setIcon(icon_b34f9c5fd8acf02a8af6d84d1e116f62);
+            
+    
+            var marker_34c44e5a7618f8416d76cc0cc0c543c1 = L.marker(
+                [55.70225, 12.59645],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_cf0a111c73a0210cb177a85c44f527d0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_84f4a36b98b10932f35bae548862edd7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_325dd79b281a6398189c2eb6db120877 = $(`<div id="html_325dd79b281a6398189c2eb6db120877" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 17:59<br>                                         Lat: 55.70225<br>                                         Lon: 12.59645                                         </div>`)[0];
+                popup_84f4a36b98b10932f35bae548862edd7.setContent(html_325dd79b281a6398189c2eb6db120877);
+            
+        
+
+        marker_34c44e5a7618f8416d76cc0cc0c543c1.bindPopup(popup_84f4a36b98b10932f35bae548862edd7)
+        ;
+
+        
+    
+    
+                marker_34c44e5a7618f8416d76cc0cc0c543c1.setIcon(icon_cf0a111c73a0210cb177a85c44f527d0);
+            
+    
+            var marker_d2c914e5bfcfca9c3236f4b4854bf36b = L.marker(
+                [55.702167, 12.5964],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_d38ddf6397771968d572ebc81d156a85 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_560336380f630fbd8f15b36f6fb73300 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fed59d62ca4d46064a5323cf6e47c319 = $(`<div id="html_fed59d62ca4d46064a5323cf6e47c319" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 18:05<br>                                         Lat: 55.702167<br>                                         Lon: 12.5964                                         </div>`)[0];
+                popup_560336380f630fbd8f15b36f6fb73300.setContent(html_fed59d62ca4d46064a5323cf6e47c319);
+            
+        
+
+        marker_d2c914e5bfcfca9c3236f4b4854bf36b.bindPopup(popup_560336380f630fbd8f15b36f6fb73300)
+        ;
+
+        
+    
+    
+                marker_d2c914e5bfcfca9c3236f4b4854bf36b.setIcon(icon_d38ddf6397771968d572ebc81d156a85);
+            
+    
+            var marker_b3375c75af62962d14bd56eadab55b35 = L.marker(
+                [57.592833, 11.212],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_cc096372be88dfcc8c1968a5e42b610a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ec90912271df3bf94cdec5c74b0623fc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c7218dbf0d32268def35990507fe47a4 = $(`<div id="html_c7218dbf0d32268def35990507fe47a4" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 18:08<br>                                         Lat: 57.592833<br>                                         Lon: 11.212                                         </div>`)[0];
+                popup_ec90912271df3bf94cdec5c74b0623fc.setContent(html_c7218dbf0d32268def35990507fe47a4);
+            
+        
+
+        marker_b3375c75af62962d14bd56eadab55b35.bindPopup(popup_ec90912271df3bf94cdec5c74b0623fc)
+        ;
+
+        
+    
+    
+                marker_b3375c75af62962d14bd56eadab55b35.setIcon(icon_cc096372be88dfcc8c1968a5e42b610a);
+            
+    
+            var marker_d68d3c9c9e2cf41b8d2da3e676f86876 = L.marker(
+                [55.7022, 12.59635],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_b67f1653bb3bcd0c49604dbd6b246dd6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e3ec1f8ceaaf80a1fb38ac93fbe1774d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ecb415bc604b6620a4d87c4b0b5c479f = $(`<div id="html_ecb415bc604b6620a4d87c4b0b5c479f" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 18:11<br>                                         Lat: 55.7022<br>                                         Lon: 12.59635                                         </div>`)[0];
+                popup_e3ec1f8ceaaf80a1fb38ac93fbe1774d.setContent(html_ecb415bc604b6620a4d87c4b0b5c479f);
+            
+        
+
+        marker_d68d3c9c9e2cf41b8d2da3e676f86876.bindPopup(popup_e3ec1f8ceaaf80a1fb38ac93fbe1774d)
+        ;
+
+        
+    
+    
+                marker_d68d3c9c9e2cf41b8d2da3e676f86876.setIcon(icon_b67f1653bb3bcd0c49604dbd6b246dd6);
+            
+    
+            var marker_d4cb3142a46b5b8ff07ffaad0b58ca3f = L.marker(
+                [57.616667, 11.1645],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_3a7c4659e4504174844044a640b39a4b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fcbfa6bf3cf051fdd091fae21563d702 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_66b090d58b3a6c55fdbdd0cd0c9e8132 = $(`<div id="html_66b090d58b3a6c55fdbdd0cd0c9e8132" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 18:14<br>                                         Lat: 57.616667<br>                                         Lon: 11.1645                                         </div>`)[0];
+                popup_fcbfa6bf3cf051fdd091fae21563d702.setContent(html_66b090d58b3a6c55fdbdd0cd0c9e8132);
+            
+        
+
+        marker_d4cb3142a46b5b8ff07ffaad0b58ca3f.bindPopup(popup_fcbfa6bf3cf051fdd091fae21563d702)
+        ;
+
+        
+    
+    
+                marker_d4cb3142a46b5b8ff07ffaad0b58ca3f.setIcon(icon_3a7c4659e4504174844044a640b39a4b);
+            
+    
+            var marker_e527d49cb2b0f759e063e38bf11546da = L.marker(
+                [55.70215, 12.596517],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_7ac7967d73462a3501640a6bb9b9fe92 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2750d5c47a6894076a730b095c959699 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d254774d9e1684ba89f7510c9d5e6cda = $(`<div id="html_d254774d9e1684ba89f7510c9d5e6cda" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 18:20<br>                                         Lat: 55.70215<br>                                         Lon: 12.596517                                         </div>`)[0];
+                popup_2750d5c47a6894076a730b095c959699.setContent(html_d254774d9e1684ba89f7510c9d5e6cda);
+            
+        
+
+        marker_e527d49cb2b0f759e063e38bf11546da.bindPopup(popup_2750d5c47a6894076a730b095c959699)
+        ;
+
+        
+    
+    
+                marker_e527d49cb2b0f759e063e38bf11546da.setIcon(icon_7ac7967d73462a3501640a6bb9b9fe92);
+            
+    
+            var marker_90b8f0c1d3b2e5d08efa20768f0a75d2 = L.marker(
+                [57.640833, 11.1165],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_b5111016ba9de87d998f5999a8cc6035 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0cda8962ea4d74c88e185ea1a1915733 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cf5f8b0e89d09c4541e339b107a2cfcc = $(`<div id="html_cf5f8b0e89d09c4541e339b107a2cfcc" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 18:20<br>                                         Lat: 57.640833<br>                                         Lon: 11.1165                                         </div>`)[0];
+                popup_0cda8962ea4d74c88e185ea1a1915733.setContent(html_cf5f8b0e89d09c4541e339b107a2cfcc);
+            
+        
+
+        marker_90b8f0c1d3b2e5d08efa20768f0a75d2.bindPopup(popup_0cda8962ea4d74c88e185ea1a1915733)
+        ;
+
+        
+    
+    
+                marker_90b8f0c1d3b2e5d08efa20768f0a75d2.setIcon(icon_b5111016ba9de87d998f5999a8cc6035);
+            
+    
+            var marker_74cb36c977d6e147c051260e4df15703 = L.marker(
+                [57.867333, 10.362333],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_9a3b3859e2f6d5bf1082d63fb18f2219 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5abdc89f2daea9d534acd1677f0bfd83 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e652c7973d5046a730a4ad087ddfe50c = $(`<div id="html_e652c7973d5046a730a4ad087ddfe50c" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 19:44<br>                                         Lat: 57.867333<br>                                         Lon: 10.362333                                         </div>`)[0];
+                popup_5abdc89f2daea9d534acd1677f0bfd83.setContent(html_e652c7973d5046a730a4ad087ddfe50c);
+            
+        
+
+        marker_74cb36c977d6e147c051260e4df15703.bindPopup(popup_5abdc89f2daea9d534acd1677f0bfd83)
+        ;
+
+        
+    
+    
+                marker_74cb36c977d6e147c051260e4df15703.setIcon(icon_9a3b3859e2f6d5bf1082d63fb18f2219);
+            
+    
+            var marker_45079069071f36b0454872aaadc3ab2f = L.marker(
+                [55.576033, 12.70255],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_2a04cc4d7fb31085229ed1ef859c2587 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_16f39d4702a42638d404a0d3d13f35e1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_68910e493b2c0054c10ea77393296b3e = $(`<div id="html_68910e493b2c0054c10ea77393296b3e" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 19:47<br>                                         Lat: 55.576033<br>                                         Lon: 12.70255                                         </div>`)[0];
+                popup_16f39d4702a42638d404a0d3d13f35e1.setContent(html_68910e493b2c0054c10ea77393296b3e);
+            
+        
+
+        marker_45079069071f36b0454872aaadc3ab2f.bindPopup(popup_16f39d4702a42638d404a0d3d13f35e1)
+        ;
+
+        
+    
+    
+                marker_45079069071f36b0454872aaadc3ab2f.setIcon(icon_2a04cc4d7fb31085229ed1ef859c2587);
+            
+    
+            var marker_4c72db9be71fd83562afadb975df6b4d = L.marker(
+                [57.864333, 10.298167],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_b025fd609a5c50a70329f42415419ef8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a26a08599b5a7f6fe8c48cbf40786d6b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_32f573f688012997c53788f5265a9fa3 = $(`<div id="html_32f573f688012997c53788f5265a9fa3" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 19:50<br>                                         Lat: 57.864333<br>                                         Lon: 10.298167                                         </div>`)[0];
+                popup_a26a08599b5a7f6fe8c48cbf40786d6b.setContent(html_32f573f688012997c53788f5265a9fa3);
+            
+        
+
+        marker_4c72db9be71fd83562afadb975df6b4d.bindPopup(popup_a26a08599b5a7f6fe8c48cbf40786d6b)
+        ;
+
+        
+    
+    
+                marker_4c72db9be71fd83562afadb975df6b4d.setIcon(icon_b025fd609a5c50a70329f42415419ef8);
+            
+    
+            var marker_893261ffce600341ea297a4332a04f4d = L.marker(
+                [55.53975, 12.701783],
+                {
+}
+            ).addTo(map_346f0715a249824208df0d84b145fdad);
+        
+    
+            var icon_ada086038fd8fe59d37407d46a255470 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_070feb68cd6cd54989009df28ce9842c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9c8b6a0edc4f2cf5c7204e7aaf0667d4 = $(`<div id="html_9c8b6a0edc4f2cf5c7204e7aaf0667d4" style="width: 100.0%; height: 100.0%;">                                         Time: 2006-03-22 19:57<br>                                         Lat: 55.53975<br>                                         Lon: 12.701783                                         </div>`)[0];
+                popup_070feb68cd6cd54989009df28ce9842c.setContent(html_9c8b6a0edc4f2cf5c7204e7aaf0667d4);
+            
+        
+
+        marker_893261ffce600341ea297a4332a04f4d.bindPopup(popup_070feb68cd6cd54989009df28ce9842c)
+        ;
+
+        
+    
+    
+                marker_893261ffce600341ea297a4332a04f4d.setIcon(icon_ada086038fd8fe59d37407d46a255470);
+            
+</script>
+</html>
